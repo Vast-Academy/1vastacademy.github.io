@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <title>
+    Vast Academy
+  </title>
+
+   <!-- UniIcon CDN Link  -->
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- slider stylesheet -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="../css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<style>
+    .service-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container-img1 {
+            float: left;
+            margin: 15px;
+            width: 250px;
+            height: 230px;
+            background-color: rgb(233, 230, 230);
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .step-wizard-list {
+            background: #fff;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            color: #333;
+            list-style-type: none;
+            border-radius: 10px;
+            display: flex;
+            padding: 10px 5px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .step-wizard-item {
+            padding: 0 20px;
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            position: relative;
+        }
+
+        .step-wizard-item+.step-wizard-item:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 19px;
+            background: #21d4fd;
+            width: 100%;
+            height: 2px;
+            transform: translateX(-50%);
+            z-index: -10;
+        }
+
+        .progress-count {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 600;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+            color: transparent;
+        }
+
+        .progress-count:after {
+            content: "";
+            height: 40px;
+            width: 40px;
+            background: #21d4fd;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -10;
+        }
+
+        .progress-count:before {
+            content: "";
+            height: 10px;
+            width: 20px;
+            border-left: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -60%) rotate(-45deg);
+            transform-origin: center center;
+        }
+
+        .progress-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .current-item .progress-count:before,
+        .current-item~.step-wizard-item .progress-count:before {
+            display: none;
+        }
+
+        .current-item~.step-wizard-item .progress-count:after {
+            height: 10px;
+            width: 10px;
+        }
+
+        .current-item~.step-wizard-item .progress-label {
+            opacity: 0.5;
+        }
+
+        .current-item .progress-count:after {
+            background: #fff;
+            border: 2px solid #21d4fd;
+        }
+
+        .current-item .progress-count {
+            color: #21d4fd;
+        }
+    
+   </style>
+
+<body>
+    <div class="hero_area">
+       <header class="header_section" >
+        <div class="container2">
+          <div class="top1">
+             <div class="logo">
+             <a href="index.html">
+              <img src="images/Logo.png" alt="" width="120px">
+            </a>
+             </div>
+          </div>
+          <div class="top2">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Vast Academy
+            </span>
+          </a>
+        </div>
+        <div class="top3">
+          <button type="button" class="btn btn-primary"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Sign in</button>
+        </div>
+        </div>
+        
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="allcourses.html">
+                          Courses
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="services.html">
+                          IT Services
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="client.html">
+                        Client
+                    </a>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="https://aiita.org/study_centre/students_directory">
+                          Check-Online
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+              </ul>
+            <div class="user_option">
+              <a href="https://vacomputers.com/">
+                <i class="fa fa-exchange" aria-hidden="true"></i>
+                <span>
+                  VACOMPUTERS.COM
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+              </a>
+              <form class="form-inline ">
+                <button class="btn nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header> 
+
+
+      <section>
+        <div class="service-container">
+          <a href="model1/index.html"> <h2 class="service-title">3GDigital.net</h2></a>
+          <div class="service-details-container">
+              <div class="container-img1">
+                  <img src="../images/snac.jpg" alt="Static Website Image" class="service-image" width="250px">
+              </div>
+              <div class="service-details">
+              </div>
+              <div class="service-description">
+                  <p>Transform your business presence with our Static Website Development Service that showcases your business profile online, displays your products and services, and includes essential pages like Home, Services, Contact Us, and About Us.</p>
+              </div>
+              
+               <section class="step-wizard-list">
+        <div class="step-wizard-item">
+            <span class="progress-count">1</span>
+            <span class="progress-label">Ordered</span>
+        </div>
+        <div class="step-wizard-item current-item">
+            <span class="progress-count">2</span>
+            <span class="progress-label">Shipped</span>
+        </div>
+        <div class="step-wizard-item">
+            <span class="progress-count">3</span>
+            <span class="progress-label">Out for Delivery</span>
+        </div>
+        <div class="step-wizard-item">
+            <span class="progress-count">4</span>
+            <span class="progress-label">Received</span>
+        </div>
+    </section>
+              <div class="buttons-container">
+                <a href="../model1/index.html"><button type="button" class="btn btn-danger">Check Website Models</button></a>
+            </div>
+      </section>
+
+      <section>
+        <div class="service-container">
+          <a href="real-estate-html-template/index.html"> <h2 class="service-title">vastacademy.in</h2></a>
+          <div class="service-details-container">
+              <div class="container-img1">
+                  <img src="../images/snac.jpg" alt="Static Website Image" class="service-image" width="250px">
+              </div>
+              <div class="service-details">
+              </div>
+              <div class="service-description">
+                  <p>Transform your business presence with our Static Website Development Service that showcases your business profile online, displays your products and services, and includes essential pages like Home, Services, Contact Us, and About Us.</p>
+              </div>
+              <section class="step-wizard-list">
+                <div class="step-wizard-item">
+                    <span class="progress-count">1</span>
+                    <span class="progress-label">Ordered</span>
+                </div>
+                <div class="step-wizard-item current-item">
+                    <span class="progress-count">2</span>
+                    <span class="progress-label">Shipped</span>
+                </div>
+                <div class="step-wizard-item">
+                    <span class="progress-count">3</span>
+                    <span class="progress-label">Out for Delivery</span>
+                </div>
+                <div class="step-wizard-item">
+                    <span class="progress-count">4</span>
+                    <span class="progress-label">Received</span>
+                </div>
+            </section>
+              
+              <div class="buttons-container">
+                <a href="../model1/index.html"><button type="button" class="btn btn-danger">Check Website Models</button></a>
+            </div>
+      </section>
+
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="address">
+                <h4>Academy</h4>
+                <ul>
+                  <li> <a href="">About Us</a></li>
+                  <li><a href="">Gallery</a></li>
+                  <li><a href="">Achievements</a></li>
+                  <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="links">
+                <h4>Follow Us On</h4>
+                <div class="col-lg-3">
+                  <div class="social-links">
+                    <ul>
+  
+                      <li><a href="https://www.facebook.com/BestpracticalInstituteMajitha?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://www.instagram.com/vast_academy_majitha?igsh=MXY5ZHFncTIwd2xsaw=="><i class="fa fa-instagram"></i></a></li>
+                      <li><a href="https://www.youtube.com/@vastacademy"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="hours">
+                <h4>Reach Us</h4>
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Near New Bus Stand, Oppo. Govt. Sen. Sec School (Majitha) </span>
+                </a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </footer> 
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+  crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  -->
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+</script>
+<script src="js/custom.js"></script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const checkButton = document.querySelector('.buttons-container button');
+      const buttonsRemoved = localStorage.getItem('buttonsRemoved');
+
+      if (buttonsRemoved === 'true') {
+          checkButton.textContent = "Check Website Status";
+      }
+  });
+</script>
+
+
+</body>
+
+</html>
