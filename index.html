@@ -32,202 +32,207 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-</head>
-<style>
-  /* Add or modify the following styles in your CSS */
 
-  .mobile-banner-section {
-    display: none;
-  }
+  <style>
+    /* Add or modify the following styles in your CSS */
 
-  @media only screen and (max-width: 767px) {
-    .slider_section {
+    .mobile-banner-section {
       display: none;
     }
 
-    .mobile-banner-section {
-      display: block;
-      text-align: center;
-      /* Center the content */
-    }
-
-    .banner-container {
-      position: relative;
-      width: 100%;
-      max-width: 569px;
-      margin: 0 auto;
-      overflow: hidden;
-      /* Ensure the content doesn't overflow */
-    }
-
-    .banner_image {
-      width: 100%;
-      height: 100vh;
-      /* Adjusted to cover the full height of the viewport */
-      object-fit: cover;
-      /* Maintain aspect ratio and cover container */
-    }
-
-    .banner-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-content {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-      padding: 20px;
-      width: 80%;
-      max-width: 400px;
-    }
-
-    .banner-content .display-4 {
-      font-size: 30px;
-    }
-
-    /* ... (rest of the styles remain the same) */
-  }
-
-  /* Existing styles for desktop view */
-
-  /* Add the following styles to your existing CSS */
-  .mobile-navigation {
-    display: none;
-  }
-
-  /* Media query for mobile view */
-  @media only screen and (max-width: 767px) {
-    .mobile-navigation {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #000;
-      /* Set the background color to black */
-      color: #fff;
-      /* Set the text color to white */
-      padding: 15px 0;
-      box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-      /* Ensure it's above other elements */
-    }
-
-    .nav-item {
-      text-align: center;
-      text-decoration: none;
-      color: #fff;
-      /* Set the text color to white */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 25%;
-      /* Set width to 25% for four items in a row */
-      transition: 0.3s;
-      /* Add transition for a smooth effect */
-    }
-
-    .nav-item i {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .nav-item span {
-      font-size: 12px;
-      /* Adjust font size for text */
-    }
-
-    /* Hover effect for better visibility */
-    .nav-item:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      /* Light background on hover */
-      border-radius: 50%;
-      /* Circular shape on hover */
-    }
-  }
-
-  @media (max-width: 768px) {
-    .top1{
-      text-align: center;
-      margin-left: 20px;
-    }
-    .container2{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .top2{
-      margin-top: -35px;
-    }
-    .top3 {
+    @media only screen and (max-width: 767px) {
+      .slider_section {
         display: none;
+      }
+
+      .mobile-banner-section {
+        display: block;
+        text-align: center;
+        /* Center the content */
+      }
+
+      .banner-container {
+        position: relative;
+        width: 100%;
+        max-width: 569px;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Ensure the content doesn't overflow */
+      }
+
+      .banner_image {
+        width: 100%;
+        height: 100vh;
+        /* Adjusted to cover the full height of the viewport */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover container */
+      }
+
+      .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .banner-content {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      .banner-content .display-4 {
+        font-size: 30px;
+      }
+
+      /* ... (rest of the styles remain the same) */
     }
-}
-</style>
+
+    /* Existing styles for desktop view */
+
+    /* Add the following styles to your existing CSS */
+    .mobile-navigation {
+      display: none;
+    }
+
+    /* Media query for mobile view */
+    @media only screen and (max-width: 767px) {
+      .mobile-navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        /* Set the background color to black */
+        color: #fff;
+        /* Set the text color to white */
+        padding: 15px 0;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        /* Ensure it's above other elements */
+      }
+
+      .nav-item {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        /* Set the text color to white */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        /* Set width to 25% for four items in a row */
+        transition: 0.3s;
+        /* Add transition for a smooth effect */
+      }
+
+      .nav-item i {
+        font-size: 24px;
+        margin-bottom: 5px;
+      }
+
+      .nav-item span {
+        font-size: 12px;
+        /* Adjust font size for text */
+      }
+
+      /* Hover effect for better visibility */
+      .nav-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Light background on hover */
+        border-radius: 50%;
+        /* Circular shape on hover */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top1 {
+        text-align: center;
+        margin-left: 20px;
+      }
+
+      .container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .top2 {
+        margin-top: -35px;
+      }
+
+      .top3 {
+        display: none;
+      }
+    }
+  </style>
+</head>
 
 <body>
   <div class="hero_area">
-     <header class="header_section" >
+    <header class="header_section">
       <div class="container2">
         <div class="top1">
-           <div class="logo">
-           <a href="index.html">
-            <img src="images/Logo.png" alt="" width="120px">
-          </a>
-           </div>
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/Logo.png" alt="" width="120px">
+            </a>
+          </div>
         </div>
         <div class="top2">
-        <a class="navbar-brand" href="index.html">
-          <span>
-            Vast Academy
-          </span>
-        </a>
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Vast Academy
+            </span>
+          </a>
+        </div>
+        <div class="top3">
+          <button type="button" class="btn btn-primary"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Sign
+            in</button>
+        </div>
       </div>
-      <div class="top3">
-        <button type="button" class="btn btn-primary"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Sign in</button>
-      </div>
-      </div>
-      
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="web/allcourses.html">
-                        Courses
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="web/services.html">
-                        IT Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="web/client.html">
-                      Client
-                  </a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://aiita.org/study_centre/students_directory">
-                        Check-Online
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="web/contact.html">Contact Us</a>
-                </li>
-            </ul>
+
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  ">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web/allcourses.html">
+                Courses
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web/services.html">
+                IT Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web/client.html">
+                Client
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://aiita.org/study_centre/students_directory">
+                Check-Online
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web/contact.html">Contact Us</a>
+            </li>
+          </ul>
           <div class="user_option">
             <a href="https://vacomputers.com/">
               <i class="fa fa-exchange" aria-hidden="true"></i>
@@ -252,7 +257,7 @@
           </div>
         </div>
       </nav>
-    </header> 
+    </header>
     <!-- end header section -->
     <!-- slider section -->
 
@@ -400,11 +405,11 @@
               <div class="banner-content">
                 <h1 class="display-4">Confused Where to Start?</h1>
                 <p class="lead">
-                  <ul>
+                <ul>
                   <li> Begin your journey with our free courses </li>
                   <li> Just click on our free courses to start your journey </li>
                 </ul>
-              </p>
+                </p>
                 <a href="#" class="btn btn-primary btn-lg btn-list-courses">Explore Courses</a>
               </div>
             </div>
@@ -686,7 +691,7 @@
           </div>
           <div class="col-lg-7 col-md-6 px-0">
             <div class="map_container">
-              <div class="map-responsive"> 
+              <div class="map-responsive">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.49390513267!2d74.94861177562107!3d31.757012374106576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391961c3c2c9062d%3A0xe7cc52c491ff3101!2sVast%20Academy!5e0!3m2!1sen!2sin!4v1707908421077!5m2!1sen!2sin"
                   width="450" height="550" style="border:0;" allowfullscreen="" loading="lazy"
@@ -727,8 +732,10 @@
                 <div class="social-links">
                   <ul>
 
-                    <li><a href="https://www.facebook.com/BestpracticalInstituteMajitha?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.instagram.com/vast_academy_majitha?igsh=MXY5ZHFncTIwd2xsaw=="><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/BestpracticalInstituteMajitha?mibextid=ZbWKwL"><i
+                          class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/vast_academy_majitha?igsh=MXY5ZHFncTIwd2xsaw=="><i
+                          class="fa fa-instagram"></i></a></li>
                     <li><a href="https://www.youtube.com/@vastacademy"><i class="fa fa-youtube"></i></a></li>
                   </ul>
                 </div>
@@ -780,7 +787,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
 
 
- <!-- <script src="js/script.js"></script>   -->
+  <!-- <script src="js/script.js"></script>   -->
 
   <div class="mobile-navigation">
     <a href="index.html" class="nav-item">
@@ -827,7 +834,7 @@
       window.location.href = 'contact.html';
     });
 
-    
+
   </script>
 
 

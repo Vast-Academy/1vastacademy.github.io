@@ -65,8 +65,8 @@
     </header>
     <!-- end header section -->
 
-    <div class="fixed-buttons"></div> 
-    
+    <div class="fixed-buttons"></div>
+
 
     <!-- slider section -->
     <section class=" slider_section position-relative">
@@ -574,7 +574,34 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
 
-<script src="../js/script.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD1ky5I26OyWaE0_nDIKyDPZxs0Z1LqTPE",
+      authDomain: "vastacademy-a9ce3.firebaseapp.com",
+      databaseURL: "https://vastacademy-a9ce3-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "vastacademy-a9ce3",
+      storageBucket: "vastacademy-a9ce3.appspot.com",
+      messagingSenderId: "569272394674",
+      appId: "1:569272394674:web:82d9f8216635feb22bfaab",
+      measurementId: "G-DM9YGBVN98"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="../js/script.js"></script>
 
   <script>
     function openNav() {
