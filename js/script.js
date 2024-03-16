@@ -161,7 +161,7 @@ let db = firebase.database();
 
 function writeData() {
     let model = location.href;
-    const lastSlashIndex = model.lastIndexOf('o/');
+    const lastSlashIndex = model.lastIndexOf('p/');
     const modelName = model.substring(lastSlashIndex + 2).slice(0, -1);
 
     let data = {
