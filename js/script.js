@@ -154,20 +154,87 @@ function createButtons() {
     document.body.appendChild(backButton);
 }
 
-document.addEventListener('DOMContentLoaded', createButtons);
+let openedPage = location.href;
+let indexOfSlash = openedPage.lastIndexOf('/');
+
+let db = firebase.database();
 
 function writeData() {
-    let db = firebase.database();
     let model = location.href;
     const lastSlashIndex = model.lastIndexOf('o/');
     const modelName = model.substring(lastSlashIndex + 2).slice(0, -1);
 
     let data = {
-        "modelSelected": modelName
+        "modelSelected": modelName,
+        "url": "../" + modelName
     };
 
     db.ref("project/3GDigital").push(data).then((onResolved) => {
         console.log("Data saved successfully");
         location.href = "../web/client.html";
     });
+}
+
+function readData() {
+    db.ref("project/3GDigital").once('value', (data) => {
+        data.forEach((val) => {
+            let url = val.val();
+            val.forEach((val2) => {
+                if (val2.val() == "model1") {
+                    let para = document.getElementById("selectedModel");
+                    para.innerHTML = "Selected model is Model 1";
+                    let btn = document.getElementById("btn");
+                    btn.innerHTML = "Check website Status";
+                    let site = document.getElementById("site");
+                    site.href = url.url;
+                }
+
+                if (val2.val() == "model2") {
+                    let para = document.getElementById("selectedModel");
+                    para.innerHTML = "Selected model is Model 2";
+                    let btn = document.getElementById("btn");
+                    btn.innerHTML = "Check website Status";
+                    let site = document.getElementById("site");
+                    site.href = url.url;
+                }
+
+                if (val2.val() == "model3") {
+                    let para = document.getElementById("selectedModel");
+                    para.innerHTML = "Selected model is Model 3";
+                    let btn = document.getElementById("btn");
+                    btn.innerHTML = "Check website Status";
+                    let site = document.getElementById("site");
+                    site.href = url.url;
+                }
+
+            })
+        })
+    });
+}
+
+function checkData() {
+    db.ref("project/3GDigital").once('value', (data) => {
+        if (data.val() != null) {
+            readData();
+            document.getElementById("shipped").classList.remove("current-item");
+            document.getElementById("out").classList.add("current-item");
+        }
+    });
+}
+
+if (openedPage.substring(indexOfSlash) == "/client.html") {
+    document.getElementById("shipped").classList.add("current-item");
+    checkData();
+}
+
+function checkData2() {
+    db.ref("project/3GDigital").once('value', (data) => {
+        if (data.val() == null) {
+            createButtons();
+        }
+    });
+}
+
+if (openedPage.substring(indexOfSlash) != "/client.html") {
+    checkData2();
 }
